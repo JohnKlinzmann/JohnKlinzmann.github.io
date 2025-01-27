@@ -1,0 +1,586 @@
+/*Reset styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Global styles*/
+body {
+    font-family: Ubuntu, sans-serif;
+    position: relative;
+}
+
+/*---------- HEADER ---------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+}
+
+/*Taniti Island Tours Logo*/
+.logo, footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon, footer .logo .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.logo .icon {
+    background-color: black;
+    color: white;
+}
+
+footer .logo .icon {
+    background-color: white;
+    color: black;
+}
+
+/*Buttons*/
+.book-now-btn, .read-more-btn, .read-answer-btn, #booking-submit-btn, #contact-submit-btn {
+    border: 1px solid transparent;
+    padding: 1em;
+    border-radius: 10px;
+    width: 300px;
+    font-weight: 900;
+}
+
+.book-now-btn {
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 3px black;
+}
+
+.read-more-btn, #booking-submit-btn, #contact-submit-btn {
+    background-color: black;
+    color: white;
+}
+
+.book-now-btn:hover, .read-more-btn:hover, #booking-submit-btn:hover, #contact-submit-btn:hover {
+    cursor: pointer;
+    transform: scale(.95);
+}
+
+.read-more-btn, #contact-submit-btn, #booking-submit-btn {
+    margin: 1.5em auto;
+}
+
+/*Site Navigation*/
+.site-nav {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    color: gray;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: gray;
+}
+
+.site-nav a:hover {
+    color: black;
+    border-bottom: 5px solid black;
+}
+
+.home-link, .about-link, .lodging-link, .transportation-link, .cuisine-link, .entertainment-link, .natural-attractions-link, .faq-link, .contact-link {
+    border-bottom: 5px solid black;
+}
+
+/*Page indicator*/
+
+/*---------- Main ---------*/
+main {
+    position: relative;
+}
+
+/*Hero*/
+.hero-slideshow {
+    height: 500px;
+    background-color: gray;
+    padding-left: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero-slideshow h2 {
+    padding-top: 1em;
+    font-size: 5em;
+    margin-bottom: .5em;
+}
+
+.hero-slideshow h2 span {
+    display: block;
+}
+
+#book-now-form-container, #contact-form-container {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+}
+
+#book-now-form-container {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+
+#book-now-form-container h3, #contact-form-container h3 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+#book-now-form, #contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#book-now-form label, #contact-form label {
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+input {
+    height: 50px;
+    padding: 1em;
+    margin-bottom: .5em;
+    font-size: 1em;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid black;
+}
+
+#close-book-now-form {
+    font-weight: 900;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+#close-book-now-form:hover {
+    cursor: pointer;
+}
+
+/*Highlights*/
+
+/*Highlights container*/
+.highlights {
+    display: flex;
+    gap: 1.5em;
+}
+
+/*Highlight card*/
+.highlight {
+    width: 33.3%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Highlight image*/
+.highlight-photo {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/*Highlight description*/
+.highlight p {
+    text-align: justify;
+}
+
+.more-highlight {
+    display: none;
+}
+
+.highlight .read-more-btn {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.highlight .read-more-btn .fa-arrow-down, .highlight .read-more-btn .fa-arrow-up {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 16px;
+}
+
+/*--------- FOOTER ---------*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.phone {
+    font-size: 1.5rem;
+}
+
+/*---------- PAGES -----------*/
+
+/*HOME*/
+.copyright {
+    font-size: .5rem;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright a:hover {
+    border-bottom: 1px solid white;
+}
+
+.home-hero-slideshow {
+    background: url("img/home/slideshow/andreas-strandman-MWroM0BcV-M-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-home-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-home-slide-show {
+    0% {
+        background: url("img/home/slideshow/andreas-strandman-MWroM0BcV-M-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/home/slideshow/dominik-dancs-BNYapxUu6YU-unsplash.jpg");
+    }
+    40% {
+        background: url("img/home/slideshow/dominik-dancs-sA4Mc4cpz40-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/home/slideshow/dominik-dancs-UDGO6m2jm08-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/home/slideshow/maria-baranova-x7ij0Nd1TVU-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/home/slideshow/dominik-dancs-sA4Mc4cpz40-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*ABOUT*/
+.summary {
+    padding: 0 1em;
+}
+
+.about-hero-slideshow {
+    background: url("img/about/slideshow/james-qualtrough-YAjZgdre_LI-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-about-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-about-slide-show {
+    0% {
+        background: url("img/about/slideshow/james-qualtrough-YAjZgdre_LI-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/about/slideshow/jeremy-bishop-x5hHTvoaNHU-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/about/slideshow/karl-callwood-gKoLhoEF21U-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/about/slideshow/marco-pregnolato-yYVY2-75sRQ-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/about/slideshow/mikulas-prokop-EsA8y9JpzpE-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/about/slideshow/karl-callwood-gKoLhoEF21U-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*LODGING*/
+.lodging-hero-slideshow {
+    background: url("img/lodging/slideshow/cauayan-island-resort-JNoJ-eisUuY-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-lodging-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-lodging-slide-show {
+    0% {
+        background: url("img/lodging/slideshow/cauayan-island-resort-JNoJ-eisUuY-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/lodging/slideshow/christian-lambert-jcBwieuJhHA-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/lodging/slideshow/gabriel-ghnassia-A9h6OsAxTyQ-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/lodging/slideshow/jake-irish-61OONDO7nrU-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/lodging/slideshow/kyle-glenn-xY4r7y-Cllo-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/lodging/slideshow/gabriel-ghnassia-A9h6OsAxTyQ-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*TRANSPORTATION*/
+.transportation-hero-slideshow {
+    background: url("img/transportation/slideshow/bernd-dittrich-nlQkoUfpy5c-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-transportation-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-transportation-slide-show {
+    0% {
+        background: url("img/transportation/slideshow/bernd-dittrich-nlQkoUfpy5c-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/transportation/slideshow/hulki-okan-tabak-gAgFXc5PqFw-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/transportation/slideshow/mark-bosky-w58KovW_d0A-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/transportation/slideshow/markus-winkler-7vfZ3mavwu0-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/transportation/slideshow/sahaj-patel-N3CO10yjxls-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/transportation/slideshow/mark-bosky-w58KovW_d0A-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*CUISINE*/
+.cuisine-hero-slideshow {
+    background: url("img/cuisine/slideshow/gabriella-clare-marino-h7Bmptisp5o-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-cuisine-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-cuisine-slide-show {
+    0% {
+        background: url("img/cuisine/slideshow/gabriella-clare-marino-h7Bmptisp5o-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/cuisine/slideshow/louis-hansel-mVZ_gjm_TOk-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/cuisine/slideshow/louis-hansel-xtC0wQtt4Zo-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/cuisine/slideshow/ryan-kwok-jkgbZXv0nm0-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/cuisine/slideshow/sebastian-coman-photography-xR6_D4wKGc4-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/cuisine/slideshow/louis-hansel-xtC0wQtt4Zo-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*ENTERTAINMENT*/
+.entertainment-hero-slideshow {
+    background: url("img/entertainment/slideshow/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-entertainment-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-entertainment-slide-show {
+    0% {
+        background: url("img/entertainment/slideshow/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/entertainment/slideshow/jackalope-west-02HBQ2w_yak-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/entertainment/slideshow/leo-rivas-R_BLOGXpsOg-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/entertainment/slideshow/stephen-momot-UivGzIDhVyw-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/entertainment/slideshow/steve-donoghue-ynRImHi8LnY-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/entertainment/slideshow/leo-rivas-R_BLOGXpsOg-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*NATURAL ATTRACTIONS*/
+.natural-attractions-hero-slideshow {
+    background: url("img/natural-attractions/slideshow/bart-ns4bIZ6XeGY-unsplash.jpg") no-repeat center;
+    background-size: 100% 100%;
+    animation-name: play-nat-attract-slide-show;
+    animation-delay: 5s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes play-nat-attract-slide-show {
+    0% {
+        background: url("img/natural-attractions/slideshow/bart-ns4bIZ6XeGY-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url("img/natural-attractions/slideshow/daniel-sessler-6KlJoJ-gUx8-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url("img/natural-attractions/slideshow/gigi-kHt6x3qTlcc-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url("img/natural-attractions/slideshow/simon-berger-aZjw7xI3QAA-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url("img/natural-attractions/slideshow/tetiana-grypachevska-80x3QULJDN4-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url("img/natural-attractions/slideshow/gigi-kHt6x3qTlcc-unsplash.jpg");
+        background-size: 100% 100%;
+    }
+}
+
+/*FAQ*/
+.faq-hero-slideshow {
+    background: url("img/faq/slideshow/faq-ss-1.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.faq-contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5em;
+    gap: 1.5em;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.question-container {
+    padding-bottom: 1.5em;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.get-answer {
+    padding: 1em;
+    margin-left: 1em;
+}
+
+.get-answer:hover {
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+}
+
+#contact-form-container {
+    width: 50%;
+}
+
+#comments {
+    padding: 1em;
+    font-size: 1rem;
+    outline: none;
+}
+
+#comments:focus {
+    border: 2px solid black;
+}
