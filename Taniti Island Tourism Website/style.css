@@ -242,18 +242,6 @@ footer {
     text-align: center;
 }
 
-.social-network {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-}
-
-.social-icon {
-    font-size: 2em;
-    color: white;
-}
-
 /*---------- PAGES -----------*/
 
 /*HOME*/
