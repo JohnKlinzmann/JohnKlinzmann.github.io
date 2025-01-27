@@ -238,6 +238,10 @@ footer {
     position: relative;
 }
 
+footer a:hover {
+    color: white;
+}
+
 .phone {
     font-size: 1.5rem;
 }
